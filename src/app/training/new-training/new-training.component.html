@@ -1,0 +1,17 @@
+<div class="new-training" fxLayout fxLayoutAlign="center">
+  <mat-card fxFlex.xs="100%" fxFlex="400px">
+    <mat-toolbar fxLayoutAlign="center center">Time to Start</mat-toolbar>
+    <mat-card-content fxLayoutAlign="center">
+      <mat-form-field>
+        <mat-select placeholder="select training type">
+          <mat-option *ngFor="let exercise of exercises" [value]="exercise.id">
+            {{ exercise.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions fxLayoutAlign="center">
+      <button class="start-training-button" type="submit" mat-raised-button (click)="onStartTraining()">Start</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
